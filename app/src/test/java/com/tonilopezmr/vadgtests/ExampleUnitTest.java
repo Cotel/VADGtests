@@ -12,4 +12,26 @@ public class ExampleUnitTest {
     assertEquals(4, 2 + 2);
     assertThat(4, is(2 + 2));
   }
+
+
+
+
+
+
+
+
+
+
+  class SystemUnderTest {
+
+    public int sum(int a, int b) {
+      return a + b;
+    }
+
+    public int mult(int a, int b) {
+      return a * b;
+    }
+
+  }
+
 }
