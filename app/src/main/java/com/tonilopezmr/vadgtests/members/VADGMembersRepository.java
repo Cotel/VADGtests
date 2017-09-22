@@ -10,8 +10,8 @@ public class VADGMembersRepository {
   private long lastCacheTime;
 
   public VADGMembersRepository(RetrofitApi api) {
-    membersCache = new ArrayList<>();
-    api = api;
+    this.membersCache = new ArrayList<>();
+    this.api = api;
   }
 
   public List<VADGMember> getMembers() {
@@ -28,6 +28,10 @@ public class VADGMembersRepository {
     } else {
       return membersCache;
     }
+  }
+
+  public List<VADGMember> getMembersFromCache() {
+    return membersCache;
   }
 
   private void addToCache(List<VADGMember> members) {
