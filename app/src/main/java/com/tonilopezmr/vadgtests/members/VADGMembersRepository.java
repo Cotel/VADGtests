@@ -9,9 +9,9 @@ public class VADGMembersRepository {
   private ArrayList<VADGMember> membersCache;
   private long lastCacheTime;
 
-  public VADGMembersRepository() {
+  public VADGMembersRepository(RetrofitApi api) {
     membersCache = new ArrayList<>();
-    api = new RetrofitApi();
+    api = api;
   }
 
   public List<VADGMember> getMembers() {
